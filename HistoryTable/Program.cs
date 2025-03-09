@@ -107,6 +107,7 @@ app.MapDelete("/user/courses/{courseId:int}", async (int courseId, DataContext d
     {
         return Results.NotFound();
     }
+
     dataContext.UserCourse.Remove(userCourse);
 
     await dataContext.SaveChangesAsync(cancellationToken);
