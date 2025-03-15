@@ -2,6 +2,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecutionStrategy", "ExecutionStrategy\ExecutionStrategy.csproj", "{22C60426-3C79-1591-A914-44494BC9B3C4}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTable", "HistoryTable\HistoryTable.csproj", "{2CF3ED2A-3C04-7929-1051-1C5B28692293}"
 EndProject
 Global
@@ -10,6 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22C60426-3C79-1591-A914-44494BC9B3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C60426-3C79-1591-A914-44494BC9B3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C60426-3C79-1591-A914-44494BC9B3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C60426-3C79-1591-A914-44494BC9B3C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2CF3ED2A-3C04-7929-1051-1C5B28692293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CF3ED2A-3C04-7929-1051-1C5B28692293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CF3ED2A-3C04-7929-1051-1C5B28692293}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -19,6 +25,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {04FE3849-9B85-4AE7-86C9-A20F36AA728B}
+		SolutionGuid = {A3F8381B-FD6B-4773-8119-3071A1333C31}
 	EndGlobalSection
 EndGlobal

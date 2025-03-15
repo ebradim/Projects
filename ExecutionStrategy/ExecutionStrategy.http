@@ -1,0 +1,6 @@
+@ExecutionStrategy_HostAddress = http://localhost:5069
+
+GET {{ExecutionStrategy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
