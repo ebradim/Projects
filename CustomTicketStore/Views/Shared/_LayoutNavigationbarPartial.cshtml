@@ -1,0 +1,50 @@
+@using System.Security.Claims
+
+@{
+    var removeAuthNavigation =
+    Context.Request.Path.ToUriComponent().Equals("/account/login", StringComparison.OrdinalIgnoreCase)
+    ||
+    Context.Request.Path.ToUriComponent().Equals("/account/register", StringComparison.OrdinalIgnoreCase);
+}
+
+<nav class="ui secondary menu inverted black stackable">
+    <p class="header item">
+        <span class="ui text large">CustomTicketStore</span>
+        <span class="ui  blue label">CMS</span>
+
+    </p>
+
+    <div class="right menu">
+        <div class="item toggle" role="button">
+            <nav class="ui secondary menu stackable">
+
+                <div class="right menu">
+                    <div class="item toggle" role="button">
+                        <div class="ui icon mini button black ">
+                            <i class="bars icon"></i>
+                        </div>
+                    </div>
+
+                    @if (!removeAuthNavigation)
+                    {
+                        <div class="item">
+                            <a class="ui button  inverted animated" href="/account/login">
+
+                                <div class="visible content">
+                                    <span>
+                                        Log In
+                                    </span>
+                                </div>
+                                <div class="hidden content">
+                                    <i class="sign in alternate icon"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    }
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,89 @@
+@using System.Security.Claims
+
+<nav class="ui secondary mini menu stackable">
+    <h3 class="header item">
+        CustomTicketStore
+    </h3>
+
+
+
+
+    <div class="right menu">
+
+        <div class="item">
+            <div class="ui dropdown  circular basic button" data-name="@User.FindFirstValue(ClaimTypes.GivenName)"
+                tabindex="0">
+
+
+                <div class="ui vertical menu items transition hidden" tabindex="-1">
+                    <div class="header">
+                        @User.FindFirstValue(ClaimTypes.GivenName)
+                        @User.FindFirstValue(ClaimTypes.Surname)
+                    </div>
+                    <a class="item" asp-action="index" asp-controller="salones">
+                        <div class="content">
+
+                            <div class="right floated">
+                                <span class="ui text grey">
+                                    0 EGP
+                                </span>
+                                <i class="right chevron icon"></i>
+                            </div>
+                            <div class="description">
+                                <span>
+                                    <b>Wallet</b>
+                                </span>
+                            </div>
+                            <div class="extra">
+                                Total available in your wallet
+                            </div>
+                        </div>
+                    </a>
+                    <a class="item" href=@Href("/user")>
+                        Profile
+
+                    </a>
+
+                    <div class="item">
+                        Favorites
+                    </div>
+                    <div class="item">
+                        Recently viewed
+                    </div>
+
+
+                    <div class="ui divider">
+                    </div>
+                    <div class="header">Account</div>
+                    <div class="item">
+                        Settings
+                    </div>
+                    <div class="item">
+                        Subscription
+                    </div>
+
+
+
+
+                    <div class="ui divider">
+                    </div>
+
+                    <div class="item" role="button">
+                        Report a problem
+                    </div>
+                    <div class="item">
+                        <div class="right floated">
+
+                            <i class="sign out alternate icon"></i>
+                        </div>
+                        Sign out
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</nav>

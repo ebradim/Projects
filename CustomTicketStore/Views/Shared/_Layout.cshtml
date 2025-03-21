@@ -1,0 +1,71 @@
+﻿﻿@{
+    var authenticated = User.Identity?.IsAuthenticated is true;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>@ViewData["Title"] - CustomTicketStore</title>
+
+    <script type="importmap"></script>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/Fomantic-UI/fomantic.css" asp-append-version="true" />
+    </environment>
+
+    <environment include="Production">
+        <link rel="stylesheet" href="~/lib/Fomantic-UI/fomantic.min.css" asp-append-version="true" />
+    </environment>
+
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CustomTicketStore.styles.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <div class="pusher">
+        <header>
+            @if (authenticated)
+            {
+                <partial name="_UserNavigationbarPartial"></partial>
+            }
+            else
+            {
+
+                <partial name="_LayoutNavigationbarPartial"></partial>
+            }
+        </header>
+        <main role="main" class="ui vertical stripe segment">
+            @RenderBody()
+        </main>
+
+
+        <footer class="ui inverted vertical footer segment">
+
+            <div class="ui center aligned container">
+                <p>© @(DateTime.UtcNow.Year) CustomTicketStore, Inc. All rights reserved.</p>
+            </div>
+
+        </footer>
+    </div>
+    <environment include="Development">
+        <script src="~/lib/jQuery/jQuery.js"></script>
+        <script src="~/lib/Fomantic-UI/fomantic.js"></script>
+    </environment>
+
+    <environment include="Production">
+        <script src="~/lib/jQuery/jQuery.min.js"></script>
+        <script src="~/lib/Fomantic-UI/fomantic.min.js"></script>
+    </environment>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/fomantic-initializer.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

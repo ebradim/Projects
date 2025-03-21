@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+  scroll-snap-type: mandatory;
+}
+
+.ui.rounded.segment {
+  border-radius: 0.8rem !important;
+}
+.item.fluid {
+  flex-grow: 1 !important;
+}
+
+nav {
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.pusher {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto !important;
+}
+
+/*drop down menu items*/
+.ui.dropdown .ui.menu:not(.tabular) {
+  padding: 0.3rem !important;
+  border-radius: 0.8rem !important;
+}
+
+.ui.dropdown .ui.menu:not(.tabular) .item {
+  border-radius: 0.5rem !important;
+}
+
+@media (min-width: 767.98px) {
+  html {
+    font-size: 16px;
+  }
+
+  .pusher > header > nav .toggle {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .auto.rail {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .pusher > header .ui.stackable.menu {
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .mobile.hidden {
+    display: none;
+  }
+
+  .pusher > header .ui.stackable.menu .header {
+    flex-grow: 1;
+  }
+
+  .pusher > header .ui.stackable.menu .item {
+    width: fit-content !important;
+  }
+
+  .pusher > header .ui.stackable.menu .ui.container {
+    justify-content: flex-end !important;
+  }
+
+  .pusher > header .item:not(.toggle):not(.header) {
+    display: none !important;
+  }
+
+  .pusher > header > nav .toggle {
+    display: block !important;
+  }
+}

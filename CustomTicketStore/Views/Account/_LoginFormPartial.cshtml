@@ -1,0 +1,20 @@
+<form class="ui form " data-form="login" method="post" asp-antiforgery="true">
+    <div class="field">
+        <label>Username</label>
+        <input type="text" name="userName" placeholder="Your given username">
+    </div>
+    <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password">
+    </div>
+    <div class="field">
+        <div class="ui checkbox">
+            <input type="checkbox" id="persisted" name="persisted" tabindex="0">
+            <label for="persisted">Remember Me</label>
+        </div>
+    </div>
+    <button type="submit" class="ui button primary fluid">Login</button>
+    <div class="ui error message">
+    </div>
+
+</form>

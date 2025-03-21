@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Sign in to your account";
+}
+<div class="ui vertical masthead center aligned segment">
+    <div class="ui container grid centered stackable">
+
+        <div class="six wide computer ten wide tablet sixteen wide mobile column ">
+
+            <section class="ui section">
+
+                <div class="ui header">
+                    Sign in to your account
+                </div>
+                <div class="ui  divider"></div>
+                <partial name="_LoginFormPartial"></partial>
+                <div class="ui  divider"></div>
+                <section class="ui section">
+                    <i class="icon help"></i>
+                    Sign in problems? <a href="#" target="_blank" rel="noreferrer">Get
+                        help</a>
+                </section>
+            </section>
+
+
+        </div>
+
+    </div>
+
+</div>
+<environment include="@Environments.Development">
+    @section Scripts {
+        <script src="~/js/account/login.js" asp-append-version="true" defer></script>
+    }
+</environment>

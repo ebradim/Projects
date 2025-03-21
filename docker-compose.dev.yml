@@ -1,0 +1,30 @@
+services:
+  postgres:
+    container_name: postgres
+    build:
+      dockerfile: postgres.dockerfile
+      context: ./.postgres
+    environment:
+      POSTGRES_DB: projects
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    container_name: redis
+    build:
+      dockerfile: redis.dockerfile
+      context: ./.redis
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_PASSWORD: Test@123
+    volumes:
+      - redis-data:/data
+
+volumes:
+  postgres-data:
+  redis-data:

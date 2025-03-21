@@ -7,5 +7,5 @@
   },
   "[aspnetcorerazor]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp"
-  },
+  }
 }
